@@ -14,6 +14,9 @@ body {
     transform-origin:0px 0px 0px;
     background-color: #000000;
 }
+#app{
+     transform-origin:0px 0px 0px;
+    }
 
 #app1 {
     height: 2328px;
@@ -220,7 +223,7 @@ input.el-input__inner {
 </head>
 
 <body>
-
+<div id="app">
 <div id="app1">
     <div id="background">
         <img src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/icon/background5.jpg"/>
@@ -277,7 +280,7 @@ input.el-input__inner {
     <div id="chart10"></div>
     <div id="chart11"></div>
 </div>
-
+</div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/js/analysis_overview.min.js"></script>
@@ -289,11 +292,11 @@ input.el-input__inner {
         $(function() {
             //offsetWidth： 获取body元素对象的宽度，即offsetWidth=width+padding+border availWidth：返回当前屏幕宽度
             var scale = document.body.clientWidth / 1920;
-            $(document.body).css("transform", "scale("+scale+")");
+            $("#app").css("transform", "scale("+scale+")");
         });
         $(window).resize(function() {
             var scale = document.body.clientWidth / 1920;
-            $(document.body).css("transform", "scale("+scale+")" );
+            $("#app").css("transform", "scale("+scale+")" );
         });
 
 
